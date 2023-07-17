@@ -1,0 +1,84 @@
+.corousel{
+    position: relative;
+    height: 100%;
+    // width: 50%;
+    // border: 1px solid;
+    overflow: hidden;
+}
+
+
+.corousel .corousel__track-controller{
+    width: 100%;
+    height: 95%;
+}
+
+.corousel .corousel__track{
+    position: relative;
+    background-color: aquamarine;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.corousel__track{
+    height: 100%;
+    transition: all .5s linear;
+}
+
+.corousel__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.corousel__slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* left: ; */
+    // background-color: blueviolet;
+}
+
+.corousel .corousel__button{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    font-size: 200%;
+    color: $color-primary;
+    transform: translateY(-50%);
+}
+
+.corousel__button--right {
+    right: 0;
+}
+
+.corousole_nav{
+    height: 10%;
+    
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.corousel_dot{
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color .5s linear;
+}
+.corousel_dot.current-slide{
+    background-color: $color-primary;
+}
+
+.is-hidden{
+    opacity: .3;
+    pointer-events: none;
+}

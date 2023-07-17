@@ -1,0 +1,268 @@
+.categories {
+    text-transform: capitalize;
+    // background: linear-gradient(180deg, #ffffff 0%, rgba(246, 201, 14, 0) 20.01%, #ffcd50 80.75%);
+    background: linear-gradient(180deg, #ffcd50 1%, rgba(246, 201, 14, 0) 50.01%, #ffcd50 106.75%);
+
+        
+    .categories__sidebar {
+        padding-top: 40px;
+
+
+        &>div {
+            margin: 0 5px;
+        }
+
+        .list__Categories {
+            width: 70%;
+            height: fit-content;
+
+            @include breakpoint-down(small) {
+                width: 100%;
+            }
+
+            .category {
+                margin-bottom: 35px;
+
+                .cat__Head {
+                    h2 {
+
+                    }
+
+                    button {
+                        padding: .45em;
+                    }
+                }
+
+                .cat__books {
+                    flex-wrap: wrap;
+
+                    @include breakpoint-up(medium) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+
+                    &>div {
+                        // border: 1px solid rgb(255, 2, 2);
+                    }
+
+                    .book  {
+                        width: 45%;
+                        margin: 10px auto;
+                        padding: 40px 6px;
+                        background-color: #fff;
+                        // border: 1px solid $color-primary;
+                        cursor: pointer;
+
+                        border-radius: 5px;
+                        font-size: clamp(.8rem, 1vw, 10rem);
+                        transition: all .3s ease-out;
+
+                        &:hover {
+                            box-shadow: -5px 9px 20px #00000059;
+                        }
+
+                        @include breakpoint-up(medium) {
+                            width: 23%;
+                            margin: 0;
+
+                        }
+
+                        .book_img{
+                            display: block; //Bcoz img default is inline
+                            width: 90%;
+                            height: 150px;
+                            margin: 5px auto;
+                            position: relative;
+                            @include breakpoint-up(medium) {
+                                width: 65%;
+                                height: 190px;
+                            }
+
+                        }
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                          
+                        }
+
+                        h5 {
+                            font-weight: 500;
+                            font-size: 1rem;
+                            // font-size: clamp(.79rem, 1.25vw, 1.1rem);
+
+                            span {
+                                font-weight: 100;
+                                font-size: .7em;
+                            }
+                        }
+
+                        .__price {
+
+                            h4,
+                            h1 {
+                                display: inline;
+                                margin: 0;
+                            }
+
+                            h1 {
+                                color: red;
+                                font-size: 1.8em;
+                            }
+
+                            h4 {
+                                position: relative;
+                                text-decoration: line-through;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Users {
+                .user__list {
+                    margin-bottom: 35px;
+                    .user {
+                        flex-wrap: wrap;
+                        @include breakpoint-up(medium) {
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+
+
+                        &>div {
+                            // border: 1px solid rgb(255, 2, 2);
+                        }
+
+                        .user__details {
+                            width: 45%;
+                            margin: 10px auto;
+                            background-color:#fff;
+                            // border: 1px solid $color-primary;
+                            border-radius: 5px;
+                            padding: 25px 6px;
+
+                            font-size: clamp(.8rem, 1vw, 10rem);
+                            transition: all .3s ease-out;
+                            cursor: pointer;
+
+                            &:hover {
+                                filter: drop-shadow(-1px 4px 8px rgba(0, 0, 0, 0.35));
+                                
+                            }
+
+                            @include breakpoint-up(medium) {
+                                width: 23%;
+                                margin: 0;
+                            }
+
+                            .user__img {
+                                background-color: aqua;
+                                width: 90%;
+                                height: 120px;
+                                margin: 8px auto;
+                                border-radius: 100%;
+
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                span{
+                                    font-size: 3em;
+                                    color: $color-white;
+                                }
+                                @include breakpoint-up(medium) {
+                                    width: 65%;
+                                }
+                                img {
+                                    display: block; //Bcoz img default is inline
+                                    width: 100%;
+                                    height: 120px;
+                                    border-radius: 100%;
+                                    padding: 10px;
+                                    background-size: 50px;
+
+                                    @include breakpoint-up(medium) {
+                                        width: 100%;
+                                       
+                                    }
+                                }
+                            }
+
+                            h2 {
+                                font-weight: 500;
+                                font-size: clamp(.79rem, 1.25vw, 1.1rem);
+                            }
+
+                            .__details {
+
+                                h5,
+                                h1 {
+                                    display: block;
+                                    text-align: center;
+                                }
+                                
+                                h1 {
+                                    margin-bottom: 10px;
+                                    font-size: 1.5em;
+                                }
+                                
+                                h5 {
+                                    margin: 0;
+                                    font-size: .8em;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .ads__List {
+            width: 30%;
+            z-index: 1;
+            right: 0;
+            position: sticky; //imp
+            top: 0; //imp
+            height: fit-content;
+
+
+            .sidebar__content {
+                margin: 12px;
+                padding: 10px;
+
+                .heading {
+                    margin: 0;
+                    border-radius: 5px;
+                    padding: 15px;
+                    background-color: $color-primary;
+                    color: $color-white;
+                }
+
+                .__user {
+                    display: flex;
+                    height: auto;
+                    background: $color-ex-light-yellow;
+                    padding: 8px;
+                    margin: 10px 0;
+                    border-radius: 5px;
+
+                    img {
+                        width: 11%;
+                        background-color: deeppink;
+                        border-radius: 100%;
+                        margin-right: 15px;
+                    }
+
+                    h3 {
+                        margin: 7px 0;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

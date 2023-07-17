@@ -1,0 +1,11 @@
+.FullWidth{
+    flex-direction: column;
+    padding: 100px 0;
+    background-color: $color-gray;
+    text-align: center;
+    p{
+        width: 100%;
+        max-width: 600px;
+    }
+   
+}

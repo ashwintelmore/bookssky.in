@@ -1,0 +1,47 @@
+.footer {
+    box-shadow: -6px 7px 20px 4px grey;
+    background: linear-gradient(
+        rgba(246, 201, 14, 0) -50.01%, #ffcd50 106.75%);
+        
+    .footer__links {
+
+        // background-color: $color-gray;
+        @include breakpoint-down(small) {
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .footer__logo {
+            width: 80%;
+
+            @include breakpoint-up(medium) {
+                width: 80%;
+            }
+
+            img {
+
+                width: 100%;
+                margin: 10px auto;
+            }
+        }
+
+        .footer__content {
+            // margin: 10px;
+            padding: 20px;
+            width: 80%;
+
+            .social__icons {
+                flex-direction: row;
+            }
+        }
+    }
+    footer{
+        background-color: black;
+        text-align: center;
+        padding: 1px 0;
+        h4{
+
+            color: white;
+        }
+    }
+}

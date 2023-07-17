@@ -1,0 +1,112 @@
+.searchResult {
+    .search_hero {
+        position: relative;
+
+        .search_sorting {
+            position: sticky;
+            top: 20px;
+            width: 30%;
+            height: fit-content;
+        }
+
+        .search_result {
+            width: 80%;
+
+            @include breakpoint-down(small) {
+                width: 100%;
+                margin: 5px 0;
+
+                h1,
+                h2 {
+                    font-size: 1.2em;
+                    margin: 0;
+                }
+
+                h2 {
+                    font-size: 1.1em;
+                    color: $color-primary;
+                }
+
+                h4 {
+                    font-size: .8em;
+                    margin: 0;
+                }
+            }
+
+            .user_book {
+                border: 1px solid $color-primary;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 6px;
+                transition: box-shadow .2s linear;
+
+                @include breakpoint-down(small) {
+                    padding: 2px;
+                    flex-direction: column;
+                }
+
+                .user_book_img {
+                    width: 30%;
+
+                    @include breakpoint-down(small) {
+                        width: 100%;
+                        // padding: 5px;
+                    }
+
+                    .non-semantic-protector{
+                        width: 60%;
+                        left: -10%;
+                        top: -40px;
+                       
+                        @include breakpoint-up(medium) {
+                            .ribbon{
+                                font-size: 15px !important;
+                            }
+                        }
+                        @include breakpoint-down(small) {
+                            width: 30%;
+                            left: 1px;
+                            top: 10px;
+                        }
+                    }
+
+                    img {
+                        display: block;
+                        width: 80%;
+                        height: 250px;
+                        margin: 10px auto;
+
+                        @include breakpoint-down(small) {
+                            width: 70%;
+                        }
+                    }
+                }
+
+                .user_book_hero {
+                    width: 60%;
+                    margin: auto;
+
+                    .user_book_heading {
+                        width: 80%;
+                        a {
+                            width: 50%;
+                            margin: 12px 0;
+                            @include breakpoint-down(small) {
+                                width: 130%;
+                            }
+                        }
+                    }
+
+                    @include breakpoint-down(small) {
+                        width: 88%;
+                        margin: auto;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: -5px 9px 20px rgba(0, 0, 0, 0.35);
+                }
+            }
+        }
+    }
+}

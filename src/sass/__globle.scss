@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Harlow Solid Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Harlow Solid Italic'), url('../assets/font/harlow-solid-italic-cufonfonts-webfont/HARLOWSI_1.woff') format('woff');
+}
+
+.active-link {
+    background: $color-gridiant-selected-btn;
+    color: #fff;
+
+    h4 {
+        color: #fff;
+    }
+}
+
+
+
+
+.select {
+    padding: 7px;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000000;
+    opacity: 0.68;
+    font-size: 15px;
+    margin-top: 8px;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+
+.display-small-none {
+    @include breakpoint-down(small) {
+        display: none;
+        // visibility: hidden;
+    }
+}
+
+.display-medium-none {
+    @include breakpoint-up(medium) {
+        display: none;
+    }
+}
+
+
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 255, 34);
+    border-radius: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+
+    span {
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    @include breakpoint-down(small) {
+        width: 40px;
+        height: 40px;
+        margin-top: 17px;
+    }
+}
+
+#search {
+    overflow: hidden;
+    position: relative; //btn get at corner
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: $font-family-main;
+    transition: filter .3s linear;
+
+    &:hover {
+        filter: drop-shadow(-5px 9px 20px rgba(0, 0, 0, 0.35));
+    }
+
+    input {
+        padding: 10px;
+        width: 100%;
+    }
+
+
+    button,
+    .button {
+        border: none;
+        display: inline;
+        position: absolute;
+        width: 19%;
+        height: 110%;
+        top: 0;
+        right: 0;
+        color: black;
+        text-align: center;
+        z-index: 5;
+        background: $color-gridiant-btn;
+        opacity: .9;
+        margin-left: 10px;
+
+        &:active,
+        &:focus {
+            border: none;
+        }
+    }
+}
+
+
+
+
+
+.display-mobile-menu-view {
+    opacity: 0;
+    height: 50vh;
+    width: 100%;
+    background: #000;
+    transition: all .4s linear;
+}
+
+.selected {
+    background: $color-gridiant-selected-btn;
+}
+
+.social__icons {
+    // width: 100%;Finp
+    margin: 5px auto;
+
+
+    a {
+        margin: 10px;
+        font-size: 2em;
+
+    }
+}
+
+
+
+.tag {
+    background: rgba(100, 4, 255, 0.1);
+    color: $color-primary;
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-size: .89em;
+    cursor: pointer;
+    margin: 3px;
+
+    &-red {
+        background: rgba(255, 4, 4, 0.212);
+        color: red;
+    }
+
+    &-green {
+        background: rgba(12, 255, 4, 0.26);
+        color: green;
+    }
+
+    &-yellow {
+        background: rgba(238, 255, 4, 0.1);
+        color: yellow;
+    }
+
+    // @include breakpoint-down(small) {
+    //     font-size: 1em;
+    // }
+}
+
+
+
+.input {
+    width: 70%;
+    margin-bottom: 20px;
+    color: $color-heading;
+
+
+    @include breakpoint-down(small) {
+        width: 100%;
+    }
+
+    label {
+        font-weight: 400;
+        // text-decoration: line-through;
+        height: 10px;
+        font-size: 1.2em;
+    }
+
+    input {
+        margin-top: 10px;
+        width: 100%;
+        display: block;
+        padding: 10px;
+        border-radius: 10px;
+        background: #fff;
+        transition: all .4s linear;
+        color: $color-heading;
+
+        &:focus {
+            border: 1px solid $color-primary;
+        }
+    }
+
+    h5 {
+        margin: 5px;
+        font-size: .89em;
+    }
+
+    &-red {
+        color: red;
+        input {
+            color: red;
+
+            &:focus {
+                border: 1px solid red;
+            }
+        }
+        h5 {
+          color: red;
+        }
+    }
+}
+
+.secondary_btn {
+    display: inline-block; //Most Imp
+    width: 90%;
+    text-align: center;
+    border: 1px solid $color-primary;
+    padding: 15px 0;
+    margin: 5px;
+    font-weight: 500;
+    color: $color-primary;
+    border-radius: 5px;
+    background-color: #8000ff17;
+    transition: all .2s linear;
+
+    &:hover {
+        background: $color-gridiant-selected-btn;
+        color: #fff;
+    }
+}

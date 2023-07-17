@@ -1,0 +1,113 @@
+.auth__content {
+    margin: 50px auto;
+    width: 90%;
+    border-radius: 20px;
+    
+    overflow: hidden;
+    
+    @include breakpoint-up(medium) {
+        width: 80%;
+        height: 100vh;
+    }
+    &>div {
+        flex-basis: 100%;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+    }
+
+    .fill__form {
+        flex-direction: column;
+        background: linear-gradient(105.35deg, #a3c82e -12.6%, #00fc9b 88.56%);
+        // height: 100%;
+        padding: 10px;
+
+        .input {
+            width: 70%;
+            margin-bottom: 20px;
+
+            @include breakpoint-down(small) {
+                width: 100%;
+            }
+
+            label {
+                font-weight: 400;
+                height: 10px;
+                color: white;
+            }
+
+            input {
+                margin-top: 10px;
+                width: 100%;
+                display: block;
+                padding: 10px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.21);
+                transition: all .4s linear;
+                // margin-bottom: 40px;
+
+                &::placeholder {
+                    color: #fff;
+                }
+
+                &:focus {
+                    border: 1px solid $color-primary;
+                }
+            }
+
+            h6 {
+                margin: 0;
+                max-width: 80%;
+            }
+        }
+
+      
+        .btn__login {
+            width: 20%;
+            margin: 20px 0;
+            button {
+                font-family: $font-family-secondory;
+
+            }
+
+            @include breakpoint-down(small) {
+                width: 50%;
+            }
+        }
+
+        .auth__links{
+            h4 , h5{
+                text-align: center;
+                @include breakpoint-up(medium) {
+                    margin-left: 10px;
+                    margin-top: 20px;
+                    display: inline;
+                }
+            }
+
+            h5{
+               color: red;
+            }
+        }
+    }
+
+    .illustration {
+        @include breakpoint-up(medium) {
+            height: 100%;
+            background: linear-gradient(136.75deg, #FCCD55 4.45%, #E5FC55 114.78%);
+
+            img {
+                width: 70%;
+                height: fit-content;
+                transform: translateY(0%);
+            }
+        }
+
+    }
+}

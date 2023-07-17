@@ -1,0 +1,60 @@
+.profile__page {
+    .profile {
+        .profile__content {
+            .edit__form {
+                form {
+                    .formData {
+                        .form__inputs {
+                            @include breakpoint-down(small){
+                                flex-direction: column;
+                            }
+                            .inputData {
+                                flex-basis: 100%;
+
+                                .pen__upload {
+                                    margin: 0 auto;
+                                    max-width: 40%;
+                                    position: relative;
+                                    width: 120px;
+                                    height: 120px;
+
+                                    img {
+                                        border-radius: 100%;
+                                        width: 100%;
+                                        margin: 0 auto;
+                                        text-align: center;
+                                    }
+                                    .pen{
+                                        position: absolute;
+                                        top: 5px;
+                                        right: 0;
+                                        background-color: #fff;
+                                        border-radius: 100%;
+                                        width: 40px;
+                                        text-align: center;
+                                        font-size: 200%;
+                                    }
+                                    .upload {
+                                        position: absolute;
+                                        z-index: 1;
+                                        width: 100%;
+                                        left: 0;
+                                        height: 100%;
+                                        border: 1px solid red;
+                                        opacity: 0;
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .submit__btn{
+                            margin: 30px auto;
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.features {
+    background-color: #ecec007d;
+
+    .all-features {
+        padding: 7% 0;
+        flex: 1 1 1;
+
+        @include breakpoint-down(small) {
+            flex-direction: column;
+
+        }
+
+        .instruction_content {
+            h1 {
+                font-family: 'Public Sans', sans-serif;
+                font-weight: 800;
+                font-size: 2.8rem;
+                line-height: 1;
+                margin-top: 60px;
+                
+                @include breakpoint-down(small) {
+                    font-size: 2.1rem;
+                }
+            }
+            
+            li {
+                max-width: 90%;
+                line-height: 1.3;
+                list-style: auto;
+                font-size: 1.3rem;
+                color: #000;
+                margin-bottom: 20px;
+                @include breakpoint-down(small) {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .instruction_images {
+            width: 90%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .feature {
+            flex-basis: 100%;
+            height: 60vh;
+            text-align: center;
+            background: #ffffff;
+            transition: all .4s linear;
+            cursor: pointer;
+            margin: 0 10px;
+            border-radius: 10px;
+
+            &:hover {
+
+                box-shadow: -3px 3px 10px rgb(202, 202, 202);
+            }
+
+
+            @include breakpoint-down(small) {
+                padding: 74px 7px;
+                margin: 10px 0;
+            }
+
+            .feature-icon {
+                margin: 0 auto; // center icon
+                width: 70px;
+
+                @include breakpoint-down(small) {
+                    width: 60px;
+
+                }
+            }
+
+            // .feature-heading{
+
+            // }
+            .feature-description {
+                font-size: $fSize-ex-sm;
+
+                p {
+                    max-width: 85%;
+                    margin: 0 auto;
+
+                    @include breakpoint-down(small) {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}

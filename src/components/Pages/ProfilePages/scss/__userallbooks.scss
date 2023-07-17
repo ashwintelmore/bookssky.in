@@ -1,0 +1,65 @@
+.profile__page {
+    .profile {
+        .profile__content {
+            .user__book{
+                border-radius: 10px;
+                overflow: hidden;
+                background-color: #fff;
+                border: 1px solid $color-primary;
+                margin: 20px 0;
+
+                flex-wrap: wrap;
+
+                &:hover{
+                    box-shadow: -2px 7px 10px #d3d3d3;
+                }
+                img{
+                    width: 35%;
+                    height: 142px;
+                    border-radius: 7px;
+                    margin: 10px;
+                    @include breakpoint-down(small){
+                        width: 20%; 
+                    }
+                }
+                button {
+                    font-family: $font-family-secondory;
+                    padding: 5px 4px; 
+                    margin:  10px;
+                    width: 60px;
+                    @include breakpoint-down(small){
+                        padding: 0; 
+                        margin:  5px;
+                    }
+                }
+
+
+                .goted_responsce{
+                    display: none;
+                }
+
+                .book_I_T_P{
+                    width: 50%;
+                    gap: 10px;
+
+                    .book_I{
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 28%;
+                        height: 107px;
+                    }
+                    // & > *{
+                    //     flex-basis: 100%;
+                    // }
+                    @include breakpoint-down(small){
+                        width: 100%;
+                    }
+                }
+
+
+
+
+            }
+        }
+    }
+}

@@ -1,0 +1,186 @@
+.profile__page {
+    .profile {
+        margin-top: 20px;
+        gap: 2em;
+        position: relative;
+
+
+        .profile__menu {
+            position: sticky; //imp
+            top: 0; //imp
+            height: 100vh;
+            width: 20%;
+            flex-direction: column;
+
+            @include breakpoint-down(small) {
+                width: 65%;
+                position: absolute;
+                z-index: 12;
+                left: -70%;
+                transition: all .5s cubic-bezier(0.49, 1.24, 0.91, 1.15);
+                ;
+
+                &.open__profile__menu {
+                    left: 0%;
+                    background-color: $color-body;
+                }
+            }
+
+
+
+            .profile__arrow {
+                @include breakpoint-down(small) {
+                    position: absolute;
+                    z-index: 32;
+                    right: -20%;
+
+                    &.open__profile__menu {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .user__photo {
+                margin-bottom: 20px;
+                background-color: #fff;
+                padding: 30px 0;
+                text-align: center;
+
+                position: relative;
+
+                .tag {
+                    position: absolute;
+                    right: 5px;
+                    top: 10px;
+                    padding: 5px;
+                }
+
+                .profile__complition {
+                    position: absolute;
+                    top: -10px;
+                    right: 10px;
+
+                    h2 {
+                        border-radius: 100%;
+                        padding: 10px 5px;
+                        margin-top: 20px;
+
+                        // @include breakpoint-down(small) {
+                        //     padding: 10px 5px;
+                        // }
+                    }
+                }
+
+                .user__profile_img {
+                    background-color: magenta;
+                    width: 120px;
+                    height: 120px;
+                    margin: 10px auto;
+                    border-radius: 100%;
+
+                    @include breakpoint-down(small) {
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                    img {
+                        width: 100%;
+                        border-radius: 100%;
+                    }
+
+                    span {
+                        font-size: 2.5em;
+                        color: #fff;
+                    }
+                }
+
+            }
+
+            .user__menu {
+                border-radius: 10px;
+                overflow: hidden;
+                background-color: #fff;
+                height: 65%;
+                flex-direction: column;
+
+                .user__menu_active_btn {
+                    .social_med{
+                        margin-left: 15px;
+                        p{
+                           
+                        }
+                        a{
+                            padding-left: 8px;
+                            // line-height: 53px;
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+
+                    // &:hover {
+                    //     background: $color-gridiant-selected-btn;
+                    //     color: #fff;
+                    // }
+
+                    h4 {
+                        margin: 0;
+                        padding: 20px;
+                        font-weight: 600;
+
+                        // &:hover {
+                        //     color: #fff;
+                        // }
+                    }
+                }
+
+                .user__feedback {
+                    a {
+                        background: $color-dark-yellow;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+
+        .profile__content {
+            width: 80%;
+
+            .warning {
+                padding: 10px 20px;
+                font-weight: 500;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                background-color: #ffee0087;
+                color: #52570d;
+
+                &-red {
+                    background-color: #ff000052;
+                    color: #570d0d;
+                }
+
+                &-green {
+                    background-color: #00ff153d;
+                    color: #0d570d;
+                }
+
+                p {
+                    max-width: 70%;
+                    margin-left: 10px;
+                }
+            }
+
+            .user__directions__path {
+                h5 {
+                    text-transform: capitalize;
+                }
+            }
+
+            @include breakpoint-down(small) {
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+    }
+}

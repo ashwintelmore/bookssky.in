@@ -1,0 +1,16 @@
+.message {
+    height: 100vh;
+
+    .text-content{
+        max-width: 70%;
+    }
+
+    @include breakpoint-up(medium) {
+        .content {
+            max-width: 90%;
+            margin: 5% auto;
+        }
+    }
+}
+
+
